@@ -20,8 +20,6 @@ import httplib2
 filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
 h = httplib2.Http(".cache")
 file_headers, file =h.request(filedown)
-file=file.decode().split("\n\n\n")
-
+file = file.decode()
+file =file.split("\n ")
 print (file)
-
-
