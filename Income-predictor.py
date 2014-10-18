@@ -12,4 +12,14 @@
 
 #data file comes from http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data.
 
-print 'hello'
+import string
+import httplib2
+
+
+#vars that hold url
+filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data."
+h = httplib2.Http(".cache")
+file_headers, file =h.request(filedown)
+file=file.decode().split("\n")
+
+
