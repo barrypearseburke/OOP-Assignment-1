@@ -1,5 +1,5 @@
 #OOP Dt211/2 Assignment
-# Due Date 30th of Novemeber
+# Due Date 30th of November
 #Date Given 16th of October 2014
 #Title Income Predictor
 #Author: Barry Burke
@@ -20,7 +20,7 @@ import httplib2
 filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
 h = httplib2.Http(".cache")
 file_headers, file =h.request(filedown)
-file=file.decode().split("\n")
+file=file.decode().split("\n\n\n")
 
 print (file)
 
