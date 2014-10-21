@@ -14,11 +14,27 @@
 
 import string
 import httplib2
+#download fxn.
+def downloadfile():
+    #vars that hold url
+    filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+    h = httplib2.Http(".cache")
+    file_headers, file =h.request(filedown)
+    file = file.decode()
+    print(file)
 
+def splitfile():
 
-#vars that hold url
-filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
-h = httplib2.Http(".cache")
-file_headers, file =h.request(filedown)
-file = file.decode()
-print (file)
+    #will ask the user how much of the file they want to use for training and how much for testing.
+    print("How much of the file is to be used for training , precentage.\nThe precntage must be greater than 30 and less than 75")
+
+    while(1==1):
+        precentage = input("\n:")
+        if (precentage <= "30") or (precentage >= "75"):
+            print("Error, please enter a number between 30 and 75")
+        else:
+            break
+
+#downloads file
+downloadfile()
+splitfile()
