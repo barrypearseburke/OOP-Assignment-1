@@ -23,6 +23,7 @@ def downloadfile():
     file = file.decode()
     print(file)
 
+#split file downloaded into training and testing. Store in a file
 def splitfile():
 
     #will ask the user how much of the file they want to use for training and how much for testing.
@@ -34,6 +35,22 @@ def splitfile():
             print("Error, please enter a number between 30 and 75")
         else:
             break
+
+    try:
+        #declare 2 files - training and testing
+        training = open("trainfile.txt","w")#opens and creates a file called trainfile.txt in write mode
+    except IOError as etraining:
+        print(etraining)
+        quit()
+
+    try:
+        test = open ("test.txt","w") #opens and creates a file called test .txt in write mode
+    except IOError as etest:
+        print(etest)
+        quit()
+
+
+
 
 #downloads file
 downloadfile()
