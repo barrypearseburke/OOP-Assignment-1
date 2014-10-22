@@ -19,19 +19,27 @@ def downloadfile():
     #vars that hold url
     filedown= "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
     h = httplib2.Http(".cache")
-    file_headers, file =h.request(filedown)
+    file_headers, file =h.request(filedown)# that is working correctly . Header isent being added to file.
     file = file.decode()
     print(file)
+    return file
+
+#find out how many entries are in file
+def lines(file):#atm print out the number of byets.
+    linecounter=0
+    for line in file:
+        linecounter +=1
+    return(linecounter)
 
 #split file downloaded into training and testing. Store in a file
-def splitfile():
+def splitfile(file):
 
     #will ask the user how much of the file they want to use for training and how much for testing.
     print("How much of the file is to be used for training , precentage.\nThe precntage must be greater than 30 and less than 75")
 
     while(1==1):
         precentage = input("\n:")
-        if (precentage <= "30") or (precentage >= "75"):
+        if (precentage < "30") or (precentage > "75"):
             print("Error, please enter a number between 30 and 75")
         else:
             break
@@ -40,18 +48,23 @@ def splitfile():
         #declare 2 files - training and testing
         training = open("trainfile.txt","w")#opens and creates a file called trainfile.txt in write mode
     except IOError as etraining:
-        print(etraining)
+        print(etraining)#gives error to user if cant open
         quit()
 
     try:
         test = open ("test.txt","w") #opens and creates a file called test .txt in write mode
     except IOError as etest:
-        print(etest)
+        print(etest)#gives error to user if cant open
         quit()
+
+    NumberOfLines=0
+    NumberOfLines = lines(file)
+    print(NumberOfLines)
+
 
 
 
 
 #downloads file
-downloadfile()
-splitfile()
+file=downloadfile()
+splitfile(file)
