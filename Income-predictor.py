@@ -21,7 +21,9 @@ def downloadfile():
     h = httplib2.Http(".cache")
     file_headers, file =h.request(filedown)# that is working correctly . Header isent being added to file.
     file = file.decode()
-    print(file)
+    file = file.split('\n')
+    for line in file:
+        print (line)
     return file
 
 #find out how many entries are in file
@@ -39,6 +41,10 @@ def splitfile(file):
 
     while(1==1):
         precentage = input("\n:")
+
+        ##have to make precentage##
+
+
         if (precentage < "30") or (precentage > "75"):
             print("Error, please enter a number between 30 and 75")
         else:
@@ -59,7 +65,15 @@ def splitfile(file):
 
     NumberOfLines=0
     NumberOfLines = lines(file)
-    print(NumberOfLines)
+    print(NumberOfLines) #32563 lines
+
+    counter=0
+    #find out how many lines go to each file
+    TrainingEntries = (precentage//NumberOfLines) * 100
+    TestingEntries = TrainingEntries - NumberOfLines
+
+    print ("the number of lines that will be used for traing is  %d \nand the numbers used as a test will be %d" % (TrainingEntries, TestingEntries))
+
 
 
 
