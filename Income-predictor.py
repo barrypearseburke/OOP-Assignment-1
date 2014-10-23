@@ -31,7 +31,7 @@ def lines(file):#atm print out the number of byets.
     linecounter=0
     for line in file:
         linecounter +=1
-    return(linecounter)
+    return(int(linecounter))
 
 #split file downloaded into training and testing. Store in a file
 def splitfile(file):
@@ -40,12 +40,12 @@ def splitfile(file):
     print("How much of the file is to be used for training , precentage.\nThe precntage must be greater than 30 and less than 75")
 
     while(1==1):
-        precentage = input("\n:")
-
+        precentage =0
+        precentage = float(input("\n:"))
         ##have to make precentage##
 
 
-        if (precentage < "30") or (precentage > "75"):
+        if (precentage < 30) or (precentage > 75):
             print("Error, please enter a number between 30 and 75")
         else:
             break
@@ -63,14 +63,15 @@ def splitfile(file):
         print(etest)#gives error to user if cant open
         quit()
 
-    NumberOfLines=0
     NumberOfLines = lines(file)
     print(NumberOfLines) #32563 lines
 
     counter=0
     #find out how many lines go to each file
-    TrainingEntries = (precentage//NumberOfLines) * 100
-    TestingEntries = TrainingEntries - NumberOfLines
+
+    precentage =precentage/100
+    TrainingEntries = (NumberOfLines*precentage)
+    TestingEntries = NumberOfLines-TrainingEntries
 
     print ("the number of lines that will be used for traing is  %d \nand the numbers used as a test will be %d" % (TrainingEntries, TestingEntries))
 
