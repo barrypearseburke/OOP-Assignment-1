@@ -73,7 +73,24 @@ def splitfile(file):
     TrainingEntries = (NumberOfLines*precentage)
     TestingEntries = NumberOfLines-TrainingEntries
 
-    print ("the number of lines that will be used for traing is  %d \nand the numbers used as a test will be %d" % (TrainingEntries, TestingEntries))
+    print ("the number of lines that will be used for training is  %d \nand the numbers used as a test will be %d" % (TrainingEntries, TestingEntries))
+
+
+    #writes file into 2 seperate files, 1 for training and one for testing
+    counter =0
+    for line in file:
+        if(counter<TrainingEntries):
+            training.write(line)
+            training.write("\n")
+            counter= counter+1
+        else:
+            test.write(line)
+            test.write("\n")
+
+
+
+
+
 
 
 
@@ -83,3 +100,5 @@ def splitfile(file):
 #downloads file
 file=downloadfile()
 splitfile(file)
+
+
