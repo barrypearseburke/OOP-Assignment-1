@@ -83,11 +83,29 @@ def splitfile(file):
             training.write(line)
             training.write("\n")
             counter= counter+1
+
         else:
             test.write(line)
             test.write("\n")
+    #closes files
 
+    training.close()
+    test.close()
+    #end of fxn split file
 
+def formatfiletrain():
+    try:
+        #declare 2 files - training and testing
+        training = open("trainfile.txt","r")#opens a file called trainfile.txt in read mode
+    except IOError as etraining:
+        print(etraining)#gives error to user if cant open
+        quit()
+
+    try:
+        test = open ("test.txt","r") #opens  a file called test .txt in read mode
+    except IOError as etest:
+        print(etest)#gives error to user if cant open
+        quit()
 
 
 
@@ -100,5 +118,6 @@ def splitfile(file):
 #downloads file
 file=downloadfile()
 splitfile(file)
+formatfiletrain()
 
 
