@@ -14,6 +14,7 @@
 
 import string
 import httplib2
+
 #download fxn.
 def downloadfile():
     #vars that hold url
@@ -101,15 +102,17 @@ def formatfiletrain():
         print(etraining)#gives error to user if cant open
         quit()
 
-    try:
-        test = open ("test.txt","r") #opens  a file called test .txt in read mode
-    except IOError as etest:
-        print(etest)#gives error to user if cant open
-        quit()
 
 
 
+    counter=0
+    for line in training:
+        for word in line.split(","):
+            if ">50K" in word:
+                counter =counter+1
 
+
+    print(counter)
 
 
 
