@@ -103,16 +103,20 @@ def formatfiletrain():
         quit()
 
 
-
-
-    counter=0
+    #place all people in training into a file called training over 50k if over 50k , else put in a file under equal 50k
+    over50k=open("trainover50k.txt","w")
+    lesseq50k=open("trainlesseq50k.txt","w")
     for line in training:
         for word in line.split(","):
             if ">50K" in word:
-                counter =counter+1
+                over50k.write(line)
+            if "<=50K" in word:
+                lesseq50k.write(line)
 
+    #close files
+    over50k.close()
+    lesseq50k.close()
 
-    print(counter)
 
 
 
