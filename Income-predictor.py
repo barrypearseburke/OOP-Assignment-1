@@ -104,8 +104,15 @@ def formatfiletrain():
 
 
     #place all people in training into a file called training over 50k if over 50k , else put in a file under equal 50k
-    over50k=open("trainover50k.txt","w")
-    lesseq50k=open("trainlesseq50k.txt","w")
+    try:
+        over50k=open("trainover50k.txt","w")
+    except IOError as openerrorover50k:
+        print(openerrorover50k)
+    try:
+        lesseq50k=open("trainlesseq50k.txt","w")
+    except IOError as openerrorundereq50k:
+        print(openerrorundereq50k)
+
     for line in training:
         for word in line.split(","):
             if ">50K" in word:
@@ -116,15 +123,44 @@ def formatfiletrain():
     #close files
     over50k.close()
     lesseq50k.close()
+    #end of fxn
 
+def adveragefxn(listlayout, search):
+    #opens the 2 files
+    try:
+        over50k=open("trainover50k.txt","r")
+    except IOError as openerrorover50k:
+        print(openerrorover50k)
+    try:
+        lesseq50k=open("trainlesseq50k.txt","r")
+    except IOError as openerrorundereq50k:
+        print(openerrorundereq50k)
 
+    #find out what the fxn wants to find the adverage of
+    for item in listlayout:
+        if item == search:
+            numberlookup = listlayout.index(item)
+
+    print(numberlookup)
+
+    #find last element number
+    
 
 
 
 
 #downloads file
+listlayout = ["age","workclass","fnlwgt","education","education-no","marital-status","occupation","relationship","race","sex","capital-gain","capital-loss","hours-per-week","native-country","income"]
 file=downloadfile()
 splitfile(file)
 formatfiletrain()
+#get adverage age on both over and lesseq files
+adverag_age = adveragefxn(listlayout ,"age") ##sends list and string called age
+
+
+
+
+
+
 
 
