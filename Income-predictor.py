@@ -185,11 +185,12 @@ def adveragefxn(listlayout, search):
     adverageover50k = adveragevalueover50k/adveragecounter
     print(adverageover50k)
     #____________________________________________________________
-    #split file after every comma on file trainundereq50k
+    #split file after every comma on file trainundereq50k..
     adverageundereq50k=0
     adveragevalueundereq50k=0
     AdverageTotal=0
     adveragecounter=0
+
     for line in lesseq50k:
         for number in line.split(","):
 
