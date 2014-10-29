@@ -29,8 +29,8 @@
       <file leaf-file-name="Income-predictor.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Income-predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0565635" vertical-offset="2752" max-vertical-offset="3720">
-              <caret line="187" column="59" selection-start-line="187" selection-start-column="59" selection-end-line="187" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.6958378" vertical-offset="2783" max-vertical-offset="3720">
+              <caret line="229" column="78" selection-start-line="229" selection-start-column="78" selection-end-line="229" selection-end-column="78" />
               <folding>
                 <element signature="e#460#473#0" expanded="true" />
               </folding>
@@ -350,7 +350,11 @@
       <created>1414624549206</created>
       <updated>1414624549206</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="advearge working only with age&#10;&#10;">
+      <created>1414624590598</created>
+      <updated>1414624590598</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Income-predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0565635" vertical-offset="2752" max-vertical-offset="3720">
-          <caret line="187" column="59" selection-start-line="187" selection-start-column="59" selection-end-line="187" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.6958378" vertical-offset="2783" max-vertical-offset="3720">
+          <caret line="229" column="78" selection-start-line="229" selection-start-column="78" selection-end-line="229" selection-end-column="78" />
           <folding>
             <element signature="e#460#473#0" expanded="true" />
           </folding>

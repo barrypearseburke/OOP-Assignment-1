@@ -227,7 +227,7 @@ splitfile(file)
 formatfiletrain()
 #get adverage age on both over and lesseq files
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
-adverage_ed_no = adveragefxn(listlayout,"education-no")
+adverage_ed_no = adveragefxn(listlayout,"education-no")#giving error. promlems
 
 
 #Adverage_ed_no= adveragefxn(listlayout,"education-no")
