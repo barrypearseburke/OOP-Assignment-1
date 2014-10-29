@@ -46,7 +46,7 @@ def splitfile(file):
         ##have to make precentage##
 
 
-        if (precentage < 30) or (precentage > 75):
+        if (precentage < 0.1) or (precentage > 75):
             print("Error, please enter a number between 30 and 75")
         else:
             break
@@ -155,13 +155,16 @@ def adveragefxn(listlayout, search):
 
 
     #over 50k file
+    adverageover50k =0
     adveragevalueover50k=0
     adveragecounter=0
-    adverageover50k =0
+
     #___________________________________________________________________
 
     #split file after every comma on file trainover50k
     for line in over50k:
+        searchcounter = 0
+
         for number in line.split(","):
 
             if searchcounter>13:
@@ -169,7 +172,7 @@ def adveragefxn(listlayout, search):
 
             if number.isdigit():
                 if searchcounter==numberlookup:
-                    adveragevalueover50k =adveragevalueover50k + int(number)
+                    adveragevalueover50k = adveragevalueover50k + int(number)
                     adveragecounter=adveragecounter+1
                 else:
                     searchcounter=searchcounter+1
@@ -187,7 +190,6 @@ def adveragefxn(listlayout, search):
     adveragevalueundereq50k=0
     AdverageTotal=0
     adveragecounter=0
-
     for line in lesseq50k:
         for number in line.split(","):
 
@@ -195,6 +197,7 @@ def adveragefxn(listlayout, search):
                 searchcounter=0
 
             if number.isdigit():
+
                 if searchcounter==numberlookup:
                     adveragevalueundereq50k =adveragevalueundereq50k + int(number)
                     adveragecounter=adveragecounter+1
@@ -202,6 +205,7 @@ def adveragefxn(listlayout, search):
                     searchcounter=searchcounter+1
             else:
                 searchcounter=searchcounter+1
+
 
 
 
@@ -222,7 +226,9 @@ splitfile(file)
 formatfiletrain()
 #get adverage age on both over and lesseq files
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
-Adverage_ed_no= adveragefxn(listlayout,"education-no")
+adverage_ed_no = adveragefxn(listlayout,"education-no")
+
+#Adverage_ed_no= adveragefxn(listlayout,"education-no")
 
 
 
