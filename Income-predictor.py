@@ -228,6 +228,7 @@ formatfiletrain()
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
 adverage_ed_no = adveragefxn(listlayout,"education-no")
 
+
 #Adverage_ed_no= adveragefxn(listlayout,"education-no")
 
 
