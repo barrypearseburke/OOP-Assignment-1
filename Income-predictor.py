@@ -148,6 +148,8 @@ def adveragefxn(listlayout, search):
 
     searchcounter = 0
 
+    print("the number i am looking to see if the search counter is ",numberlookup)
+
 
     #find last element number
 
@@ -166,6 +168,8 @@ def adveragefxn(listlayout, search):
         searchcounter = 0
 
         for number in line.split(","):
+            number.lstrip()
+            print(number)
 
             if searchcounter>13:
                 searchcounter=0
@@ -181,7 +185,6 @@ def adveragefxn(listlayout, search):
 
 
 
-
     adverageover50k = adveragevalueover50k/adveragecounter
     print(adverageover50k)
     #____________________________________________________________
@@ -192,8 +195,9 @@ def adveragefxn(listlayout, search):
     adveragecounter=0
 
     for line in lesseq50k:
-        for number in line.split(","):
 
+        for number in line.split(","):
+            number.lstrip()
             if searchcounter>13:
                 searchcounter=0
 
@@ -206,6 +210,7 @@ def adveragefxn(listlayout, search):
                     searchcounter=searchcounter+1
             else:
                 searchcounter=searchcounter+1
+
 
 
 
@@ -227,7 +232,9 @@ splitfile(file)
 formatfiletrain()
 #get adverage age on both over and lesseq files
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
-adverage_ed_no = adveragefxn(listlayout,"education-no")#giving error. promlems
+
+print("---------------------------------------------------------------------\n\n---------------------------------------")
+adverage_ed_no = adveragefxn(listlayout,"education-no")#giving error. prob is all numbers are " 21" note space
 
 
 #Adverage_ed_no= adveragefxn(listlayout,"education-no")
