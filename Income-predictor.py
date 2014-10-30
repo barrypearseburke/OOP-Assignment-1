@@ -12,8 +12,9 @@
 
 #data file comes from http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
 
-import string
+
 import httplib2
+import string
 
 #download fxn.
 def downloadfile():
@@ -28,7 +29,7 @@ def downloadfile():
     return file
 
 #find out how many entries are in file
-def lines(file):#atm print out the number of byets.
+def lines(file):
     linecounter=0
     for line in file:
         linecounter +=1
@@ -46,7 +47,7 @@ def splitfile(file):
         ##have to make precentage##
 
 
-        if (precentage < 30) or (precentage > 75):
+        if (precentage < 0.1) or (precentage > 75):
             print("Error, please enter a number between 30 and 75")
         else:
             break
@@ -104,8 +105,15 @@ def formatfiletrain():
 
 
     #place all people in training into a file called training over 50k if over 50k , else put in a file under equal 50k
-    over50k=open("trainover50k.txt","w")
-    lesseq50k=open("trainlesseq50k.txt","w")
+    try:
+        over50k=open("trainover50k.txt","w")
+    except IOError as openerrorover50k:
+        print(openerrorover50k)
+    try:
+        lesseq50k=open("trainlesseq50k.txt","w")
+    except IOError as openerrorundereq50k:
+        print(openerrorundereq50k)
+
     for line in training:
         for word in line.split(","):
             if ">50K" in word:
@@ -116,15 +124,124 @@ def formatfiletrain():
     #close files
     over50k.close()
     lesseq50k.close()
+    #end of fxn
+
+def adveragefxn(listlayout, search):
+    #This fxn will recieve the list of how the data is arraged, The call will also send what it wants
+    #to find the advearge of.
+    #it uses the .isdigt to see if the item is a digt
+
+    #opens the 2 files
+    try:
+        over50k=open("trainover50k.txt","r")
+    except IOError as openerrorover50k:
+        print(openerrorover50k)
+    try:
+        lesseq50k=open("trainlesseq50k.txt","r")
+    except IOError as openerrorundereq50k:
+        print(openerrorundereq50k)
+
+    #find out what the fxn wants to find the adverage of
+    for item in listlayout:
+        if item == search:
+            numberlookup = listlayout.index(item)#gives item number in list
+
+
+    searchcounter = 0
+
+
+    #find last element number
+
+
+
+
+    #over 50k file
+    adverageover50k =0
+    adveragevalueover50k=0
+    adveragecounter=0
+
+    #___________________________________________________________________
+
+    #split file after every comma on file trainover50k
+    for line in over50k:
+        searchcounter = 0
+
+        for number in line.split(","):
+            number=number.lstrip()
+
+            if searchcounter>13:
+                searchcounter=0
+
+            if number.isdigit():
+                if searchcounter==numberlookup:
+                    adveragevalueover50k = adveragevalueover50k + int(number)
+                    adveragecounter=adveragecounter+1
+                else:
+                    searchcounter=searchcounter+1
+            else:
+                searchcounter=searchcounter+1
+
+
+
+    adverageover50k = adveragevalueover50k/adveragecounter
+    print(adverageover50k)
+    #____________________________________________________________
+    #split file after every comma on file trainundereq50k..
+    adverageundereq50k=0
+    adveragevalueundereq50k=0
+    AdverageTotal=0
+    adveragecounter=0
+
+    for line in lesseq50k:
+
+        for number in line.split(","):
+
+            number=number.lstrip()
+
+            if searchcounter>13:
+                searchcounter=0
+
+            if number.isdigit():
+
+                if searchcounter==numberlookup:
+                    adveragevalueundereq50k =adveragevalueundereq50k + int(number)
+                    adveragecounter=adveragecounter+1
+                else:
+                    searchcounter=searchcounter+1
+            else:
+                searchcounter=searchcounter+1
 
 
 
 
 
+
+    adverageundereq50k = adveragevalueundereq50k/adveragecounter
+    print(adverageundereq50k)
+
+    #adverage of adverage
+    AdverageTotal = (adverageover50k+adverageundereq50k )/2
+    print(AdverageTotal)
+
+    return(AdverageTotal)
 
 #downloads file
+listlayout = ["age","workclass","fnlwgt","education","education-no","marital-status","occupation","relationship","race","sex","capital-gain","capital-loss","hours-per-week","native-country","income"]
 file=downloadfile()
 splitfile(file)
 formatfiletrain()
+#get adverage age on both over and lesseq files
+adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
+
+
+adverage_ed_no = adveragefxn(listlayout,"education-no")
+
+
+
+
+
+
+
+
 
 
