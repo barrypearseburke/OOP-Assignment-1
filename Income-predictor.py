@@ -225,6 +225,7 @@ def adveragefxn(listlayout, search):
 
     return(AdverageTotal)
 
+
 #fnlwgt education and native country not needed for study
 listlayout = ["age","workclass","fnlwgt","education","education-no","marital-status","occupation","relationship","race","sex","capital-gain","capital-loss","hours-per-week","native-country","income"]
 file=downloadfile()
