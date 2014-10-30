@@ -247,7 +247,7 @@ list_job =["Tech-support", "Craft-repair", "Other-service", "Sales", "Exec-manag
 list_relationship = [ "Wife", "Own-child", "Husband", "Not-in-family", "Other-relative", "Unmarried"]
 list_race =["White", "Asian-Pac-Islander","Amer-Indian-Eskimo", "Other", "Black"]
 list_gender =["Male","Female"]
-#-----------
+#------------
 
 
 
