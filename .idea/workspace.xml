@@ -28,8 +28,8 @@
       <file leaf-file-name="Income-predictor.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Income-predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2246999" vertical-offset="2946" max-vertical-offset="3870">
-              <caret line="244" column="50" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.74442536" vertical-offset="3301" max-vertical-offset="3885">
+              <caret line="249" column="13" selection-start-line="249" selection-start-column="13" selection-end-line="249" selection-end-column="13" />
               <folding>
                 <element signature="e#461#476#0" expanded="true" />
               </folding>
@@ -372,7 +372,11 @@
       <created>1414706811369</created>
       <updated>1414706811369</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="lists typed out for unnumbers collums">
+      <created>1414707885386</created>
+      <updated>1414707885386</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -392,11 +396,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -433,6 +437,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Income-predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3660" max-vertical-offset="3885">
+          <caret line="244" column="50" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
+          <folding>
+            <element signature="e#461#476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Income-predictor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2047" max-vertical-offset="3795">
@@ -635,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.8591547" vertical-offset="2835" max-vertical-offset="975975">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,14 +663,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2782462" vertical-offset="0" max-vertical-offset="593">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Income-predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2246999" vertical-offset="2946" max-vertical-offset="3870">
-          <caret line="244" column="50" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.74442536" vertical-offset="3301" max-vertical-offset="3885">
+          <caret line="249" column="13" selection-start-line="249" selection-start-column="13" selection-end-line="249" selection-end-column="13" />
           <folding>
             <element signature="e#461#476#0" expanded="true" />
           </folding>
