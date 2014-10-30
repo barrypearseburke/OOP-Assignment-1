@@ -1,11 +1,11 @@
 status: 200
-date: Thu, 30 Oct 2014 16:57:23 GMT
+date: Thu, 30 Oct 2014 20:38:13 GMT
+etag: "173057c2-3ca4a1-2fbb419259600"
 server: Apache/2.2.15 (CentOS)
 accept-ranges: bytes
-content-length: 3974305
-etag: "173057c2-3ca4a1-2fbb419259600"
-set-cookie: Coyote-2-80c30157=80c3019b:0; path=/
 last-modified: Sat, 10 Aug 1996 18:14:48 GMT
+content-length: 3974305
+set-cookie: Coyote-2-80c30157=80c30194:0; path=/
 content-type: text/plain; charset=UTF-8
 connection: close
 content-location: http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data

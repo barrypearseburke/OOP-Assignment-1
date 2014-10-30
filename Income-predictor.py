@@ -225,23 +225,28 @@ def adveragefxn(listlayout, search):
 
     return(AdverageTotal)
 
-#downloads file
+#fnlwgt education and native country not needed for study
 listlayout = ["age","workclass","fnlwgt","education","education-no","marital-status","occupation","relationship","race","sex","capital-gain","capital-loss","hours-per-week","native-country","income"]
 file=downloadfile()
 splitfile(file)
 formatfiletrain()
 #get adverage age on both over and lesseq files
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
-
-
+#get adverage education-number on over and lesseq files
 adverage_ed_no = adveragefxn(listlayout,"education-no")
+adverage_capital_gain = adveragefxn(listlayout,"capital-gain")
+adverage_capital_loss = adveragefxn(listlayout,"capital-loss")
+adverage_Hours_per_week = adveragefxn(listlayout,"hours-per-week")
 
-
-
-
-
-
-
+#-----------------
+#lists
+list_workclass = ["Private","Self-emp-not-inc","Self-emp-inc","Federal-gov","Local-gov","State-gov","Without-pay","Never worked","?"]
+list_marital_status =["Married-civ-spouse","Divorced","Never-Married","separated","Widowed","Married-spouse-absent"]
+list_job =["Tech-support", "Craft-repair", "Other-service", "Sales", "Exec-managerial", "Prof-specialty", "Handlers-cleaners", "Machine-op-inspct", "Adm-clerical", "Farming-fishing", "Transport-moving", "Priv-house-serv", "Protective-serv", "Armed-Forces"]
+list_relationship = [ "Wife", "Own-child", "Husband", "Not-in-family", "Other-relative", "Unmarried"]
+list_race =["White", "Asian-Pac-Islander","Amer-Indian-Eskimo", "Other", "Black"]
+list_gender =["Male","Female"]
+#-----------
 
 
 
