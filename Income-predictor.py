@@ -12,8 +12,9 @@
 
 #data file comes from http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
 
-import string
+
 import httplib2
+import string
 
 #download fxn.
 def downloadfile():
@@ -148,8 +149,6 @@ def adveragefxn(listlayout, search):
 
     searchcounter = 0
 
-    print("the number i am looking to see if the search counter is ",numberlookup)
-
 
     #find last element number
 
@@ -168,8 +167,7 @@ def adveragefxn(listlayout, search):
         searchcounter = 0
 
         for number in line.split(","):
-            number.lstrip()
-            print(number)
+            number=number.lstrip()
 
             if searchcounter>13:
                 searchcounter=0
@@ -197,7 +195,9 @@ def adveragefxn(listlayout, search):
     for line in lesseq50k:
 
         for number in line.split(","):
-            number.lstrip()
+
+            number=number.lstrip()
+
             if searchcounter>13:
                 searchcounter=0
 
@@ -233,11 +233,9 @@ formatfiletrain()
 #get adverage age on both over and lesseq files
 adverag_age = adveragefxn(listlayout ,"age") #sends list and string called age
 
-print("---------------------------------------------------------------------\n\n---------------------------------------")
-adverage_ed_no = adveragefxn(listlayout,"education-no")#giving error. prob is all numbers are " 21" note space
 
+adverage_ed_no = adveragefxn(listlayout,"education-no")
 
-#Adverage_ed_no= adveragefxn(listlayout,"education-no")
 
 
 
