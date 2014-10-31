@@ -226,6 +226,17 @@ def adveragefxn(listlayout, search):
     return(AdverageTotal)
 
 
+def discrete_Cal(listlayout ,searchbn):
+    # number look up
+        for item in listlayout:
+          if item == search:
+              numberlookup = listlayout.index(item)#gives item number in list
+
+
+        
+
+
+
 #fnlwgt education and native country not needed for study
 listlayout = ["age","workclass","fnlwgt","education","education-no","marital-status","occupation","relationship","race","sex","capital-gain","capital-loss","hours-per-week","native-country","income"]
 file=downloadfile()
@@ -241,13 +252,15 @@ adverage_Hours_per_week = adveragefxn(listlayout,"hours-per-week")
 
 #-----------------
 #lists
-list_workclass = ["Private","Self-emp-not-inc","Self-emp-inc","Federal-gov","Local-gov","State-gov","Without-pay","Never worked","?"]
+list_workclass = ["Private","Self-emp-not-inc","Self-emp-inc","Federal-gov","Local-gov","State-gov","Without-pay","Never worked"]
 list_marital_status =["Married-civ-spouse","Divorced","Never-Married","separated","Widowed","Married-spouse-absent"]
 list_job =["Tech-support", "Craft-repair", "Other-service", "Sales", "Exec-managerial", "Prof-specialty", "Handlers-cleaners", "Machine-op-inspct", "Adm-clerical", "Farming-fishing", "Transport-moving", "Priv-house-serv", "Protective-serv", "Armed-Forces"]
 list_relationship = [ "Wife", "Own-child", "Husband", "Not-in-family", "Other-relative", "Unmarried"]
 list_race =["White", "Asian-Pac-Islander","Amer-Indian-Eskimo", "Other", "Black"]
 list_gender =["Male","Female"]
 #------------
+workclass_over50k =discrete_Cal(listlayout,"workclass")
+
 
 
 
