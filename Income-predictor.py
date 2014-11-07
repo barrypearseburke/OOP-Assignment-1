@@ -24,8 +24,8 @@ def downloadfile():
     file_headers, file = h.request(filedown)  # that is working correctly . Header isent being added to file.
     file = file.decode()
     file = file.split('\n')
-    for line in file:
-        print(line)
+    #for line in file:
+        #print(line)
     return file
 
 
@@ -135,7 +135,7 @@ def adveragefxn(listlayout, search):
     #This fxn will recieve the list of how the data is arraged, The call will also send what it wants
     #to find the advearge of.
     #it uses the .isdigt to see if the item is a digt
-
+    print(search)
     #opens the 2 files
     try:
         over50k = open("trainover50k.txt", "r")
@@ -223,7 +223,7 @@ def adveragefxn(listlayout, search):
     return (AdverageTotal)
 
 
-def discrete_Cal(listlayout,listusing,  search):
+def discrete_Cal(listlayout,dictionaryover50k,dictionaryundereq50k, search):
 
     try:
         over50k = open("trainover50k.txt", "r")
@@ -239,6 +239,61 @@ def discrete_Cal(listlayout,listusing,  search):
     for item in listlayout:
         if item == search:
             numberlookup = listlayout.index(item)  #gives item number in list
+
+    #over 50k
+    for line in over50k:
+        searchcounter = 0
+        over50kcounter=0
+        for value in line.split(","):
+
+            value= value.lstrip()
+            if searchcounter > 13:
+                    searchcounter = 0
+            if searchcounter == numberlookup:
+                if value in dictionaryover50k:
+                    dictionaryover50k[value]+=1
+                    searchcounter+=1
+                    over50kcounter+=1
+                else:
+                    dictionaryover50k[value]=1
+                    searchcounter+=1
+                over50kcounter+=1
+            else:
+                searchcounter+=1
+
+
+    #now divide the number of people in each key by the total number
+
+
+    for k1,v1 in dictionaryover50k:
+        precentageofvalueover = v1/over50kcounter
+        dictionaryover50k[precentageofvalue]
+
+    #undereq50k
+    for line in lesseq50k:
+        searchcounter = 0
+        undereq50kcounter=0
+        for value in line.split(","):
+
+            value= value.lstrip()
+            if searchcounter > 13:
+                    searchcounter = 0
+            if searchcounter == numberlookup:
+                if value in dictionaryundereq50k:
+                    dictionaryundereq50k[value]+=1
+                    searchcounter+=1
+                    undereq50kcounter+=1
+                else:
+                    dictionaryundereq50k[value]=1
+                    searchcounter+=1
+                    undereq50kcounter+=1
+
+            else:
+                searchcounter+=1
+
+    for k2,v2 in dictionaryundereq50k:
+        precentageofvalueundereq=v2/undereq50kcounter
+        dictionaryundereq50k[precentageofvalueundereq]
 
 
 
@@ -263,24 +318,48 @@ adverage_Hours_per_week = adveragefxn(listlayout, "hours-per-week")
 #-----------------
 #dictionarys define
 
-workclass_over50k{}
-workclass_undereq50{}
-matital-status_over50k{}
-matital-status_undereq50k{}
-occupation_over50k{}
-occupation_undereq50k{}
-relationship_over50k{}
-relationship_under50k{}
-race_over50k{}
-race_undereq50k{}
-sex_over50k{}
-sex_undereq50k{}
- w
+workclass_over50k={}
+workclass_undereq50k={}
+matital_status_over50k={}
+matital_status_undereq50k={}
+occupation_over50k={}
+occupation_undereq50k={}
+relationship_over50k={}
+relationship_under50k={}
+race_over50k={}
+race_undereq50k={}
+sex_over50k={}
+sex_undereq50k={}
+
 
 
 #------------
-workclass = discrete_Cal(listlayout,list_workclass "workclass")
+print("-------------")
+discrete_Cal(listlayout,workclass_over50k,workclass_undereq50k,"workclass")
+print(workclass_over50k)
+print(workclass_undereq50k)
 
+print("-------------")
+discrete_Cal(listlayout,matital_status_over50k,matital_status_undereq50k,"marital-status")
+print(matital_status_over50k)
+print(matital_status_undereq50k)
 
+print ("--------------")
+discrete_Cal(listlayout,occupation_over50k,occupation_undereq50k,"occupation")
+print(matital_status_over50k)
+print(matital_status_undereq50k)
 
+print("---------")
+discrete_Cal(listlayout,relationship_over50k,relationship_under50k,"relationship")
+print(relationship_over50k)
+print(relationship_under50k)
 
+print("----------")
+discrete_Cal(listlayout,race_over50k,race_undereq50k,"race")
+print(race_over50k)
+print(race_undereq50k)
+
+print("---------")
+discrete_Cal(listlayout,sex_over50k,sex_undereq50k,"sex")
+print(sex_over50k)
+print(sex_undereq50k)
