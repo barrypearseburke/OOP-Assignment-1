@@ -265,9 +265,6 @@ def discrete_Cal(listlayout,dictionaryover50k,dictionaryundereq50k, search):
     #now divide the number of people in each key by the total number
 
 
-    for k1,v1 in dictionaryover50k:
-        precentageofvalueover = v1/over50kcounter
-        dictionaryover50k[precentageofvalue]
 
     #undereq50k
     for line in lesseq50k:
@@ -291,9 +288,6 @@ def discrete_Cal(listlayout,dictionaryover50k,dictionaryundereq50k, search):
             else:
                 searchcounter+=1
 
-    for k2,v2 in dictionaryundereq50k:
-        precentageofvalueundereq=v2/undereq50kcounter
-        dictionaryundereq50k[precentageofvalueundereq]
 
 
 
