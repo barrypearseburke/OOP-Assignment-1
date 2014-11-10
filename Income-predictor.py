@@ -1,7 +1,7 @@
 # OOP Dt211/2 Assignment
 # Due Date 30th of November
 # Date Given 16th of October 2014
-#Title Income Predictor
+# Title Income Predictor
 #Author: Barry Burke
 #Student Number :C13427078
 #----------------------------------
@@ -25,7 +25,7 @@ def downloadfile():
     file = file.decode()
     file = file.split('\n')
     #for line in file:
-        #print(line)
+    #print(line)
     return file
 
 
@@ -223,8 +223,7 @@ def adveragefxn(listlayout, search):
     return (AdverageTotal)
 
 
-def discrete_Cal(listlayout,dictionaryover50k,dictionaryundereq50k, search):
-
+def discrete_Cal(listlayout, dictionaryover50k, dictionaryundereq50k, search):
     try:
         over50k = open("trainover50k.txt", "r")
     except IOError as openerrorover50k:
@@ -239,64 +238,73 @@ def discrete_Cal(listlayout,dictionaryover50k,dictionaryundereq50k, search):
     for item in listlayout:
         if item == search:
             numberlookup = listlayout.index(item)  #gives item number in list
+            break  #stops looping after dound number
 
     #over 50k
+    over50kcounter = 0
     for line in over50k:
         searchcounter = 0
-        over50kcounter=0
+
         for value in line.split(","):
 
-            value= value.lstrip()
+            value = value.lstrip()
             if searchcounter > 13:
-                    searchcounter = 0
+                searchcounter = 0
             if searchcounter == numberlookup:
                 if value in dictionaryover50k:
-                    dictionaryover50k[value]+=1
-                    searchcounter+=1
-                    over50kcounter+=1
+                    dictionaryover50k[value] += 1
+                    searchcounter += 1
+                    over50kcounter += 1
                 else:
-                    dictionaryover50k[value]=1
-                    searchcounter+=1
-                over50kcounter+=1
+                    dictionaryover50k[value] = 1
+                    searchcounter += 1
+                    over50kcounter += 1
             else:
-                searchcounter+=1
+                searchcounter += 1
 
+
+    for k1, v1, in dictionaryover50k.items():
+        fraction1 = v1 / over50kcounter*100 #get percentage of each . ie 10 % of people over 50 are state employed
+        #write fraction to dictionary
+        dictionaryover50k[k1] = fraction1
 
     #now divide the number of people in each key by the total number
 
 
 
     #undereq50k
+    undereq50kcounter = 0
     for line in lesseq50k:
         searchcounter = 0
-        undereq50kcounter=0
+
         for value in line.split(","):
 
-            value= value.lstrip()
+            value = value.lstrip()
             if searchcounter > 13:
-                    searchcounter = 0
+                searchcounter = 0
             if searchcounter == numberlookup:
                 if value in dictionaryundereq50k:
-                    dictionaryundereq50k[value]+=1
-                    searchcounter+=1
-                    undereq50kcounter+=1
+                    dictionaryundereq50k[value] += 1
+                    searchcounter += 1
+                    undereq50kcounter += 1
                 else:
-                    dictionaryundereq50k[value]=1
-                    searchcounter+=1
-                    undereq50kcounter+=1
+                    dictionaryundereq50k[value] = 1
+                    searchcounter += 1
+                    undereq50kcounter += 1
 
             else:
-                searchcounter+=1
+                searchcounter += 1
 
 
+    for k2, v2 in dictionaryundereq50k.items():
+        fraction2 = v2 / undereq50kcounter*100  #precentage ie , 20% of people under 50k are state employed . If test says job is state employed , he prob under 50k
+        #write fraction value to dictionary undereq 50k
+        dictionaryundereq50k[k2] = fraction2
 
 
 #fnlwgt education and native country not needed for study
 listlayout = ["age", "workclass", "fnlwgt", "education", "education-no", "marital-status", "occupation", "relationship",
               "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "income"]
-
-
-
 
 file = downloadfile()
 splitfile(file)
@@ -312,24 +320,24 @@ adverage_Hours_per_week = adveragefxn(listlayout, "hours-per-week")
 #-----------------
 #dictionarys define
 
-workclass_over50k={}
-workclass_undereq50k={}
-matital_status_over50k={}
-matital_status_undereq50k={}
-occupation_over50k={}
-occupation_undereq50k={}
-relationship_over50k={}
-relationship_under50k={}
-race_over50k={}
-race_undereq50k={}
-sex_over50k={}
-sex_undereq50k={}
+workclass_over50k = {}
+workclass_undereq50k = {}
+matital_status_over50k = {}
+matital_status_undereq50k = {}
+occupation_over50k = {}
+occupation_undereq50k = {}
+relationship_over50k = {}
+relationship_under50k = {}
+race_over50k = {}
+race_undereq50k = {}
+sex_over50k = {}
+sex_undereq50k = {}
 
 
 
 #------------
 print("-------------")
-discrete_Cal(listlayout,workclass_over50k,workclass_undereq50k,"workclass")
+discrete_Cal(listlayout, workclass_over50k, workclass_undereq50k, "workclass")
 print(workclass_over50k)
 print(workclass_undereq50k)
 

@@ -6,8 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/archive.ics.uci.edu,ml,machine-learning-databases,adult,adult.data,48afda30c5ef458e18a57d9d4cf559a8" afterPath="$PROJECT_DIR$/.cache/archive.ics.uci.edu,ml,machine-learning-databases,adult,adult.data,48afda30c5ef458e18a57d9d4cf559a8" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainfile.txt" afterPath="$PROJECT_DIR$/trainfile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainlesseq50k.txt" afterPath="$PROJECT_DIR$/trainlesseq50k.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainover50k.txt" afterPath="$PROJECT_DIR$/trainover50k.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP-Assignment-1.iws" />
@@ -34,10 +32,10 @@
       <file leaf-file-name="Income-predictor.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Income-predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5985401" vertical-offset="4104" max-vertical-offset="5475">
-              <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.61833334" vertical-offset="4886" max-vertical-offset="5595">
+              <caret line="301" column="44" selection-start-line="301" selection-start-column="44" selection-end-line="301" selection-end-column="44" />
               <folding>
-                <element signature="e#463#478#0" expanded="true" />
+                <element signature="e#464#479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +71,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="54" />
     <option name="y" value="-8" />
-    <option name="width" value="1320" />
-    <option name="height" value="784" />
+    <option name="width" value="1874" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -398,27 +396,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3402367" sideWeight="0.49943882" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13650307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13616557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39751554" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32692307" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35059172" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3498965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -451,16 +449,73 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>338</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>343</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>348</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>353</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>358</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>363</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>298</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Income-predictor.py</url>
+          <line>244</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="33" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Income-predictor.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4350" max-vertical-offset="5490">
+          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+          <folding>
+            <element signature="e#464#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Income-predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5565">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -470,7 +525,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3883" max-vertical-offset="5565">
           <caret line="270" column="3" selection-start-line="270" selection-start-column="3" selection-end-line="270" selection-end-column="3" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,7 +535,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="4019" max-vertical-offset="5565">
           <caret line="294" column="40" selection-start-line="294" selection-start-column="40" selection-end-line="294" selection-end-column="40" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -490,7 +545,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3793" max-vertical-offset="5565">
           <caret line="294" column="35" selection-start-line="294" selection-start-column="35" selection-end-line="294" selection-end-column="35" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -500,7 +555,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3614" max-vertical-offset="4380">
           <caret line="277" column="2" selection-start-line="277" selection-start-column="2" selection-end-line="277" selection-end-column="2" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -510,7 +565,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3324" max-vertical-offset="4080">
           <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -520,7 +575,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3324" max-vertical-offset="4080">
           <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -530,7 +585,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3301" max-vertical-offset="3885">
           <caret line="249" column="13" selection-start-line="249" selection-start-column="13" selection-end-line="249" selection-end-column="13" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -540,7 +595,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3660" max-vertical-offset="3885">
           <caret line="244" column="50" selection-start-line="244" selection-start-column="50" selection-end-line="244" selection-end-column="50" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,7 +605,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2047" max-vertical-offset="3795">
           <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,7 +615,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2604" max-vertical-offset="3825">
           <caret line="182" column="0" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,7 +625,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2783" max-vertical-offset="3720">
           <caret line="229" column="78" selection-start-line="229" selection-start-column="78" selection-end-line="229" selection-end-column="78" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,7 +635,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2753" max-vertical-offset="3690">
           <caret line="228" column="53" selection-start-line="228" selection-start-column="53" selection-end-line="228" selection-end-column="53" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -590,7 +645,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="3600">
           <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -600,7 +655,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="2760">
           <caret line="155" column="30" selection-start-line="155" selection-start-column="30" selection-end-line="155" selection-end-column="30" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -610,7 +665,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2052" max-vertical-offset="2760">
           <caret line="169" column="73" selection-start-line="169" selection-start-column="73" selection-end-line="170" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -620,7 +675,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1852" max-vertical-offset="2580">
           <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -630,7 +685,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1453" max-vertical-offset="2130">
           <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="133" selection-end-column="29" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,7 +695,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1267" max-vertical-offset="2040">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -650,7 +705,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="1980">
           <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,7 +715,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,7 +725,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="892" max-vertical-offset="1635">
           <caret line="79" column="14" selection-start-line="78" selection-start-column="73" selection-end-line="79" selection-end-column="14" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,7 +735,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,7 +745,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1380">
           <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -700,7 +755,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1335">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -710,7 +765,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -736,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="645">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trainlesseq50k.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.2036777" vertical-offset="4551" max-vertical-offset="185865">
@@ -754,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2075.383" vertical-offset="975505" max-vertical-offset="975975">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,16 +809,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.71259844" vertical-offset="572" max-vertical-offset="1080">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd_breakpoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1031" max-vertical-offset="3000">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85" vertical-offset="45" max-vertical-offset="645">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Income-predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5985401" vertical-offset="4104" max-vertical-offset="5475">
-          <caret line="290" column="0" selection-start-line="290" selection-start-column="0" selection-end-line="290" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.61833334" vertical-offset="4886" max-vertical-offset="5595">
+          <caret line="301" column="44" selection-start-line="301" selection-start-column="44" selection-end-line="301" selection-end-column="44" />
           <folding>
-            <element signature="e#463#478#0" expanded="true" />
+            <element signature="e#464#479#0" expanded="true" />
           </folding>
         </state>
       </provider>
