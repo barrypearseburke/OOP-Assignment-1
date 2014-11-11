@@ -302,6 +302,45 @@ def discrete_Cal(listlayout, dictionaryover50k, dictionaryundereq50k, search):
         dictionaryundereq50k[k2] = fraction2
 
 
+
+def testfxn():
+# the test fxn will read in a line
+#check to see if which element it refers to in the list layout
+#if a  number, compare value in test line with adverage value.
+#if decret value , compares to see  if the prectage is higher in over 50 or undereq 50 of that job in the relevent dictionary
+#finnaly it makes a decision on over or undereq and then check to see if its right .
+
+#open file
+    try:
+        test = open("test.txt", "r")
+    except IOError as test:
+        print(test)
+
+    #for loop that goes through the file line by line
+    elementaccesed =0
+    dict={}
+    for line in test:
+        line.split(",")
+        #for loop for each word entry
+        for word in line:
+
+            #everytime we go through this loop ,we access each element
+            if(elementaccesed=0):
+                #age
+                if int(word) >adverage_age:
+                    dict[word]="over"
+                elif int(word) <= adverage_age:
+                    dict[word] ="undereq"
+
+            elementaccesed+=1
+            elif(elementaccesed =1):
+            #work
+
+
+
+
+
+
 #fnlwgt education and native country not needed for study
 listlayout = ["age", "workclass", "fnlwgt", "education", "education-no", "marital-status", "occupation", "relationship",
               "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "income"]
@@ -310,7 +349,7 @@ file = downloadfile()
 splitfile(file)
 formatfiletrain()
 #get adverage age on both over and lesseq files
-adverag_age = adveragefxn(listlayout, "age")  #sends list and string called age
+adverage_age = adveragefxn(listlayout, "age")  #sends list and string called age
 #get adverage education-number on over and lesseq files
 adverage_ed_no = adveragefxn(listlayout, "education-no")
 adverage_capital_gain = adveragefxn(listlayout, "capital-gain")
@@ -333,35 +372,14 @@ race_undereq50k = {}
 sex_over50k = {}
 sex_undereq50k = {}
 
-
-
 #------------
-print("-------------")
 discrete_Cal(listlayout, workclass_over50k, workclass_undereq50k, "workclass")
-print(workclass_over50k)
-print(workclass_undereq50k)
-
-print("-------------")
 discrete_Cal(listlayout,matital_status_over50k,matital_status_undereq50k,"marital-status")
-print(matital_status_over50k)
-print(matital_status_undereq50k)
-
-print ("--------------")
 discrete_Cal(listlayout,occupation_over50k,occupation_undereq50k,"occupation")
-print(matital_status_over50k)
-print(matital_status_undereq50k)
-
-print("---------")
 discrete_Cal(listlayout,relationship_over50k,relationship_under50k,"relationship")
-print(relationship_over50k)
-print(relationship_under50k)
-
-print("----------")
 discrete_Cal(listlayout,race_over50k,race_undereq50k,"race")
-print(race_over50k)
-print(race_undereq50k)
-
-print("---------")
 discrete_Cal(listlayout,sex_over50k,sex_undereq50k,"sex")
-print(sex_over50k)
-print(sex_undereq50k)
+
+#call test
+
+testfxn(listlayout)
