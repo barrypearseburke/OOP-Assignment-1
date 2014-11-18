@@ -303,7 +303,7 @@ def discrete_Cal(listlayout, dictionaryover50k, dictionaryundereq50k, search):
 
 
 
-def testfxn():
+def testfxn(listlayout):
 # the test fxn will read in a line
 #check to see if which element it refers to in the list layout
 #if a  number, compare value in test line with adverage value.
@@ -320,20 +320,28 @@ def testfxn():
     elementaccesed =0
     dict={}
     for line in test:
+        elementaccesed=0
         line.split(",")
         #for loop for each word entry
-        for word in line:
-
+        for word in line.split(","):
+            word =word.lstrip("")
             #everytime we go through this loop ,we access each element
-            if(elementaccesed=0):
-                #age
-                if int(word) >adverage_age:
-                    dict[word]="over"
-                elif int(word) <= adverage_age:
-                    dict[word] ="undereq"
+            if word.isdigit():
+                word =int(word)
+                if(elementaccesed==0):
+                    #age
+                    if int(word) > adverage_age:
+                        dict[word]="over"
 
-            elementaccesed+=1
-            elif(elementaccesed =1):
+                        elementaccesed+=1
+                    if word <= adverage_age:
+                        dict[word] ="undereq"
+
+                        elementaccesed+=1
+
+                elementaccesed+=1
+                #elif(elementaccesed==1):
+                    #pass
             #work
 
 
@@ -381,5 +389,18 @@ discrete_Cal(listlayout,race_over50k,race_undereq50k,"race")
 discrete_Cal(listlayout,sex_over50k,sex_undereq50k,"sex")
 
 #call test
-
+"""
+print(workclass_over50k)
+print(workclass_undereq50k)
+print(matital_status_over50k)
+print(matital_status_undereq50k)
+print(occupation_over50k)
+print(occupation_undereq50k)
+print(relationship_over50k)
+print(relationship_under50k)
+print(race_over50k)
+print(race_undereq50k)
+print(sex_over50k)
+print(sex_undereq50k)
+"""
 testfxn(listlayout)

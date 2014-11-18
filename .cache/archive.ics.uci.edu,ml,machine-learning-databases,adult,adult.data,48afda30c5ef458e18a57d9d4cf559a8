@@ -1,14 +1,14 @@
 status: 200
-etag: "173057c2-3ca4a1-2fbb419259600"
-server: Apache/2.2.15 (CentOS)
-date: Mon, 10 Nov 2014 22:43:21 GMT
 connection: close
-set-cookie: Coyote-2-80c30157=80c30190:0; path=/
+set-cookie: Coyote-2-80c30157=80c30194:0; path=/
+server: Apache/2.2.15 (CentOS)
+content-type: text/plain; charset=UTF-8
 last-modified: Sat, 10 Aug 1996 18:14:48 GMT
 accept-ranges: bytes
-content-type: text/plain; charset=UTF-8
-content-length: 3974305
 content-location: http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
+date: Tue, 18 Nov 2014 21:21:36 GMT
+etag: "173057c2-3ca4a1-2fbb419259600"
+content-length: 3974305
 
 39, State-gov, 77516, Bachelors, 13, Never-married, Adm-clerical, Not-in-family, White, Male, 2174, 0, 40, United-States, <=50K
 50, Self-emp-not-inc, 83311, Bachelors, 13, Married-civ-spouse, Exec-managerial, Husband, White, Male, 0, 0, 13, United-States, <=50K
