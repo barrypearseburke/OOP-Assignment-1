@@ -11,7 +11,7 @@
 #Take the train part and divide it into people who make over $50k and under or equal to $50k
 
 #data file comes from http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data
-
+from pathlib import _Accessor
 
 import httplib2
 import string
@@ -19,6 +19,7 @@ import string
 #download fxn.
 def downloadfile():
     #vars that hold url
+    print("trying to download")
     filedown = "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
     h = httplib2.Http(".cache")
     file_headers, file = h.request(filedown)  # that is working correctly . Header isent being added to file.
@@ -328,21 +329,65 @@ def testfxn(listlayout):
             #everytime we go through this loop ,we access each element
             if word.isdigit():
                 word =int(word)
-                if(elementaccesed==0):
-                    #age
+
+                #all collums that deal with numbers
+                if(elementaccesed==0): #AGE
                     if int(word) > adverage_age:
+                        dict[word]="over"
+                        elementaccesed+=1
+
+                    if word <= adverage_age:
+                        dict[word] ="undereq"
+                        elementaccesed+=1
+
+
+
+
+                elif(elementaccesed==4): #EDUCATION NUMBER
+                    if int(word) > adverage_ed_no:
                         dict[word]="over"
 
                         elementaccesed+=1
-                    if word <= adverage_age:
+                    if word <= adverage_ed_no:
                         dict[word] ="undereq"
 
                         elementaccesed+=1
 
-                elementaccesed+=1
-                #elif(elementaccesed==1):
-                    #pass
-            #work
+                elif(elementaccesed==10): #CAPITAL GAIN
+                    if int(word) > adverage_capital_gain:
+                        dict[word]="over"
+
+                        elementaccesed+=1
+                    if word <= adverage_capital_gain:
+                        dict[word] ="undereq"
+
+                        elementaccesed+=1
+
+                elif(elementaccesed==11): #CAPITAL LOSS
+                    if int(word) > adverage_capital_loss:
+                        dict[word]="over"
+
+                        elementaccesed+=1
+                    if word <= adverage_capital_loss:
+                        dict[word] ="undereq"
+
+                        elementaccesed+=1
+
+
+                elif(elementaccesed==12): #HOURS WORKED
+                    if int(word) > adverage_Hours_per_week:
+                        dict[word]="over"
+
+                        elementaccesed+=1
+                    if word <= adverage_Hours_per_week:
+                        dict[word] ="undereq"
+
+                        elementaccesed+=1
+
+
+
+
+
 
 
 
