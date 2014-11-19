@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fa71b1-ddf1-40c8-ad95-97270a79d3c4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Income-predictor.py" afterPath="$PROJECT_DIR$/Income-predictor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/archive.ics.uci.edu,ml,machine-learning-databases,adult,adult.data,48afda30c5ef458e18a57d9d4cf559a8" afterPath="$PROJECT_DIR$/.cache/archive.ics.uci.edu,ml,machine-learning-databases,adult,adult.data,48afda30c5ef458e18a57d9d4cf559a8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.txt" afterPath="$PROJECT_DIR$/test.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainfile.txt" afterPath="$PROJECT_DIR$/trainfile.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainlesseq50k.txt" afterPath="$PROJECT_DIR$/trainlesseq50k.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trainover50k.txt" afterPath="$PROJECT_DIR$/trainover50k.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OOP-Assignment-1.iws" />
@@ -403,7 +397,11 @@
       <created>1416410082677</created>
       <updated>1416410082677</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="better">
+      <created>1416416938172</created>
+      <updated>1416416938172</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -458,7 +456,8 @@
     <MESSAGE value="lists typed out for unnumbers collums" />
     <MESSAGE value="testing branch" />
     <MESSAGE value="problems with dict" />
-    <option name="LAST_COMMIT_MESSAGE" value="problems with dict" />
+    <MESSAGE value="better" />
+    <option name="LAST_COMMIT_MESSAGE" value="better" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
