@@ -319,70 +319,67 @@ def testfxn(listlayout):
 
     #for loop that goes through the file line by line
     elementaccesed =0
-    dict={}
+    overvalue =0
+    undervalue=0
     for line in test:
+        overvalue =0
+        undervalue=0
         elementaccesed=0
-        line.split(",")
+        line = line.split(",")
         #for loop for each word entry
-        for word in line.split(","):
-            word =word.lstrip("")
+        for word in line:
+            word =word.lstrip()
+
+
             #everytime we go through this loop ,we access each element
             if word.isdigit():
-                word =int(word)
-
-                #all collums that deal with numbers
-                if(elementaccesed==0): #AGE
-                    if int(word) > adverage_age:
-                        dict[word]="over"
-                        elementaccesed+=1
-
-                    if word <= adverage_age:
-                        dict[word] ="undereq"
-                        elementaccesed+=1
+                word = int(word)
+                #if word is a digit , make it an int
 
 
+                #then check to see if what element are we accessing
+
+                if elementaccesed == 0: #were in age
+                    #now check to see if its over or under
+                    if word >adverage_age:
+                        #add over to counter
+                        overvalue+=1
+                    else:
+                        #if not over , must be under adverage(or equal)
+                        undervalue+=1
 
 
-                elif(elementaccesed==4): #EDUCATION NUMBER
-                    if int(word) > adverage_ed_no:
-                        dict[word]="over"
+                elif elementaccesed == 4: #education number
+                    if word > adverage_ed_no:
+                        #add another over to list
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+                elif elementaccesed == 10: #capital gain
+                    if word > adverage_capital_gain:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+                elif elementaccesed == 11: #capital loss
+                    if word > adverage_capital_loss:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+                elif elementaccesed == 12:
+                    if word > adverage_Hours_per_week:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+                print(overvalue,undervalue)
+                elementaccesed+=1
 
-                        elementaccesed+=1
-                    if word <= adverage_ed_no:
-                        dict[word] ="undereq"
-
-                        elementaccesed+=1
-
-                elif(elementaccesed==10): #CAPITAL GAIN
-                    if int(word) > adverage_capital_gain:
-                        dict[word]="over"
-
-                        elementaccesed+=1
-                    if word <= adverage_capital_gain:
-                        dict[word] ="undereq"
-
-                        elementaccesed+=1
-
-                elif(elementaccesed==11): #CAPITAL LOSS
-                    if int(word) > adverage_capital_loss:
-                        dict[word]="over"
-
-                        elementaccesed+=1
-                    if word <= adverage_capital_loss:
-                        dict[word] ="undereq"
-
-                        elementaccesed+=1
+            else: #if not a number
+                elementaccesed+=1
 
 
-                elif(elementaccesed==12): #HOURS WORKED
-                    if int(word) > adverage_Hours_per_week:
-                        dict[word]="over"
 
-                        elementaccesed+=1
-                    if word <= adverage_Hours_per_week:
-                        dict[word] ="undereq"
 
-                        elementaccesed+=1
+
 
 
 
