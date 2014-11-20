@@ -370,22 +370,85 @@ def testfxn(listlayout):
                         overvalue+=1
                     else:
                         undervalue+=1
-                print(overvalue,undervalue)
+                else:
+                    pass
+
                 elementaccesed+=1
 
-            else: #if not a number
+            else: #if not a number-its a word
+                if elementaccesed == 1:#workclass
+                    #check both dictonarys related to workclass
+                    workclass_over = 0
+                    workclass_under = 0
+                    workclass_over = workclass_over50k.get(word)
+                    workclass_under =workclass_undereq50k.get(word)
+                    if workclass_over > workclass_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+
+                elif elementaccesed == 5:#matital status
+                    #check both dictonarys related to matital status
+                    matital_over =0
+                    matital_under =0
+                    matital_over = matital_status_over50k.get(word)
+                    matital_under =matital_status_undereq50k.get(word)
+                    if matital_over > matital_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+                elif elementaccesed == 6:#occupation
+                    #check both dictonarys related to occupation
+                    occ_over =0
+                    occ_under =0
+                    occ_over = occupation_over50k.get(word)
+                    occ_under =occupation_undereq50k.get(word)
+                    if occ_over> occ_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+
+                elif elementaccesed == 7:#relationship
+                    #check both dictonarys related to relationship status
+                    rel_over =0
+                    rel_under =0
+                    rel_over = relationship_over50k.get(word)
+                    rel_under =relationship_under50k.get(word)
+                    if rel_over> rel_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+
+                elif elementaccesed == 8:#race
+                    #check both dictonarys related to race
+                    race_over = 0
+                    race_under = 0
+                    race_over = race_over50k.get(word)
+                    race_under =race_undereq50k.get(word)
+                    if race_over> race_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+
+                elif elementaccesed == 9:#sex
+                    #check both dictonarys related to race
+                    sex_over =0
+                    sex_under =0
+                    sex_over = sex_over50k.get(word)
+                    sex_under = sex_undereq50k.get(word)
+                    if sex_over> sex_under:
+                        overvalue+=1
+                    else:
+                        undervalue+=1
+
+                else:
+                    pass
                 elementaccesed+=1
-
-
-
-
-
-
-
-
-
-
-
 
 
 
