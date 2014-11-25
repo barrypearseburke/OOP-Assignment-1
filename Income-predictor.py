@@ -321,6 +321,12 @@ def testfxn(listlayout):
     elementaccesed =0
     overvalue =0
     undervalue=0
+    Entries =0
+    Entries_counted = 0
+    Entries_correct =0
+    Entries_wrong =0
+    Entries_not_predicted =0
+    Entries_error=0
     for line in test:
         overvalue =0
         undervalue=0
@@ -381,7 +387,11 @@ def testfxn(listlayout):
                     workclass_over = 0
                     workclass_under = 0
                     workclass_over = workclass_over50k.get(word)
+                    if workclass_over ==None: #in the event the workclass isent in the dictinoary
+                        workclass_over=0
                     workclass_under =workclass_undereq50k.get(word)
+                    if workclass_undereq50k== None:
+                        workclass_under=0
                     if workclass_over > workclass_under:
                         overvalue+=1
                     else:
@@ -393,7 +403,11 @@ def testfxn(listlayout):
                     matital_over =0
                     matital_under =0
                     matital_over = matital_status_over50k.get(word)
+                    if matital_over ==None:
+                        matital_over=0
                     matital_under =matital_status_undereq50k.get(word)
+                    if matital_under ==None:
+                        matital_under=0
                     if matital_over > matital_under:
                         overvalue+=1
                     else:
@@ -404,7 +418,11 @@ def testfxn(listlayout):
                     occ_over =0
                     occ_under =0
                     occ_over = occupation_over50k.get(word)
+                    if occ_over ==None:
+                        occ_over =0
                     occ_under =occupation_undereq50k.get(word)
+                    if occ_under ==None:
+                        occ_under=0
                     if occ_over> occ_under:
                         overvalue+=1
                     else:
@@ -416,7 +434,11 @@ def testfxn(listlayout):
                     rel_over =0
                     rel_under =0
                     rel_over = relationship_over50k.get(word)
+                    if rel_over ==None:
+                        rel_over=0
                     rel_under =relationship_under50k.get(word)
+                    if rel_under ==None:
+                        rel_under =0
                     if rel_over> rel_under:
                         overvalue+=1
                     else:
@@ -428,7 +450,11 @@ def testfxn(listlayout):
                     race_over = 0
                     race_under = 0
                     race_over = race_over50k.get(word)
+                    if race_over == None:
+                        race_over =0
                     race_under =race_undereq50k.get(word)
+                    if race_under ==None:
+                        race_under =0
                     if race_over> race_under:
                         overvalue+=1
                     else:
@@ -440,15 +466,57 @@ def testfxn(listlayout):
                     sex_over =0
                     sex_under =0
                     sex_over = sex_over50k.get(word)
+                    if sex_over ==None:
+                        sex_over =0
                     sex_under = sex_undereq50k.get(word)
+                    if sex_under ==None:
+                        sex_under =0
                     if sex_over> sex_under:
                         overvalue+=1
                     else:
                         undervalue+=1
 
-                else:
-                    pass
+                elif elementaccesed ==14:
+                    answer = word
                 elementaccesed+=1
+        #preditiction
+        if(overvalue > undervalue):
+            print("over is my preditction")
+            #check
+            if answer == ">50K\n":
+                Entries_correct +=1
+                Entries_counted+=1
+            elif answer =="<=50K\n":
+                Entries_wrong +=1
+                Entries_counted+=1
+            else:
+                Entries_error +=1
+                Entries_counted+=1
+        elif(overvalue< undervalue):
+            print("my preditiction is under or equal")
+            if answer == "<=50K\n":
+                Entries_correct +=1
+                Entries_counted+=1
+            elif answer ==">50K\n":
+                Entries_wrong +=1
+                Entries_counted+=1
+            else:
+                Entries_error+=1
+                Entries_counted+=1
+
+        elif overvalue==undervalue:
+            Entries_not_predicted+=1
+
+        Entries+=1
+
+    print("-------------------------------------------")
+    print("The Results are in\n")
+    print("Total Entries, Entries Counted , Entries Correct, Entries Wrong , Entries Not Predicted, Errors")
+    print(Entries , Entries_counted ,Entries_correct,Entries_wrong ,Entries_not_predicted ,Entries_error)
+    Correctprectage =0
+    Correctprectage = (Entries_correct/Entries_counted)*100
+
+    print(Correctprectage)
 
 
 
