@@ -2,7 +2,7 @@
 # Due Date 30th of November
 # Date Given 16th of October 2014
 # Title Income Predictor
-#Author: Barry Burke
+# Author: Barry Burke
 #Student Number :C13427078
 #----------------------------------
 
@@ -263,9 +263,8 @@ def discrete_Cal(listlayout, dictionaryover50k, dictionaryundereq50k, search):
             else:
                 searchcounter += 1
 
-
     for k1, v1, in dictionaryover50k.items():
-        fraction1 = v1 / over50kcounter*100 #get percentage of each . ie 10 % of people over 50 are state employed
+        fraction1 = v1 / over50kcounter * 100  #get percentage of each . ie 10 % of people over 50 are state employed
         #write fraction to dictionary
         dictionaryover50k[k1] = fraction1
 
@@ -296,45 +295,43 @@ def discrete_Cal(listlayout, dictionaryover50k, dictionaryundereq50k, search):
             else:
                 searchcounter += 1
 
-
     for k2, v2 in dictionaryundereq50k.items():
-        fraction2 = v2 / undereq50kcounter*100  #precentage ie , 20% of people under 50k are state employed . If test says job is state employed , he prob under 50k
+        fraction2 = v2 / undereq50kcounter * 100  #precentage ie , 20% of people under 50k are state employed . If test says job is state employed , he prob under 50k
         #write fraction value to dictionary undereq 50k
         dictionaryundereq50k[k2] = fraction2
 
 
-
 def testfxn(listlayout):
-# the test fxn will read in a line
-#check to see if which element it refers to in the list layout
-#if a  number, compare value in test line with adverage value.
-#if decret value , compares to see  if the prectage is higher in over 50 or undereq 50 of that job in the relevent dictionary
-#finnaly it makes a decision on over or undereq and then check to see if its right .
+    # the test fxn will read in a line
+    #check to see if which element it refers to in the list layout
+    #if a  number, compare value in test line with adverage value.
+    #if decret value , compares to see  if the prectage is higher in over 50 or undereq 50 of that job in the relevent dictionary
+    #finnaly it makes a decision on over or undereq and then check to see if its right .
 
-#open file
+    #open file
     try:
         test = open("test.txt", "r")
     except IOError as test:
         print(test)
 
     #for loop that goes through the file line by line
-    elementaccesed =0
-    overvalue =0
-    undervalue=0
-    Entries =0
+    elementaccesed = 0
+    overvalue = 0
+    undervalue = 0
+    Entries = 0
     Entries_counted = 0
-    Entries_correct =0
-    Entries_wrong =0
-    Entries_not_predicted =0
-    Entries_error=0
+    Entries_correct = 0
+    Entries_wrong = 0
+    Entries_not_predicted = 0
+    Entries_error = 0
     for line in test:
-        overvalue =0
-        undervalue=0
-        elementaccesed=0
+        overvalue = 0
+        undervalue = 0
+        elementaccesed = 0
         line = line.split(",")
         #for loop for each word entry
         for word in line:
-            word =word.lstrip()
+            word = word.lstrip()
 
 
             #everytime we go through this loop ,we access each element
@@ -345,181 +342,179 @@ def testfxn(listlayout):
 
                 #then check to see if what element are we accessing
 
-                if elementaccesed == 0: #were in age
+                if elementaccesed == 0:  #were in age
                     #now check to see if its over or under
-                    if word >adverage_age:
+                    if word > adverage_age:
                         #add over to counter
-                        overvalue+=1
+                        overvalue += 1
                     else:
                         #if not over , must be under adverage(or equal)
-                        undervalue+=1
+                        undervalue += 1
 
 
-                elif elementaccesed == 4: #education number
+                elif elementaccesed == 4:  #education number
                     if word > adverage_ed_no:
                         #add another over to list
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
-                elif elementaccesed == 10: #capital gain
+                        undervalue += 1
+                elif elementaccesed == 10:  #capital gain
                     if word > adverage_capital_gain:
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
-                elif elementaccesed == 11: #capital loss
+                        undervalue += 1
+                elif elementaccesed == 11:  #capital loss
                     if word > adverage_capital_loss:
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
                 elif elementaccesed == 12:
                     if word > adverage_Hours_per_week:
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
                 else:
                     pass
 
-                elementaccesed+=1
+                elementaccesed += 1
 
-            else: #if not a number-its a word
-                if elementaccesed == 1:#workclass
+            else:  #if not a number-its a word
+                if elementaccesed == 1:  #workclass
                     #check both dictonarys related to workclass
                     workclass_over = 0
                     workclass_under = 0
                     workclass_over = workclass_over50k.get(word)
-                    if workclass_over ==None: #in the event the workclass isent in the dictinoary
-                        workclass_over=0
-                    workclass_under =workclass_undereq50k.get(word)
-                    if workclass_undereq50k== None:
-                        workclass_under=0
+                    if workclass_over == None:  #in the event the workclass isent in the dictinoary
+                        workclass_over = 0
+                    workclass_under = workclass_undereq50k.get(word)
+                    if workclass_undereq50k == None:
+                        workclass_under = 0
                     if workclass_over > workclass_under:
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
 
-                elif elementaccesed == 5:#matital status
+                elif elementaccesed == 5:  #matital status
                     #check both dictonarys related to matital status
-                    matital_over =0
-                    matital_under =0
+                    matital_over = 0
+                    matital_under = 0
                     matital_over = matital_status_over50k.get(word)
-                    if matital_over ==None:
-                        matital_over=0
-                    matital_under =matital_status_undereq50k.get(word)
-                    if matital_under ==None:
-                        matital_under=0
+                    if matital_over == None:
+                        matital_over = 0
+                    matital_under = matital_status_undereq50k.get(word)
+                    if matital_under == None:
+                        matital_under = 0
                     if matital_over > matital_under:
-                        overvalue+=1
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
-                elif elementaccesed == 6:#occupation
+                elif elementaccesed == 6:  #occupation
                     #check both dictonarys related to occupation
-                    occ_over =0
-                    occ_under =0
+                    occ_over = 0
+                    occ_under = 0
                     occ_over = occupation_over50k.get(word)
-                    if occ_over ==None:
-                        occ_over =0
-                    occ_under =occupation_undereq50k.get(word)
-                    if occ_under ==None:
-                        occ_under=0
-                    if occ_over> occ_under:
-                        overvalue+=1
+                    if occ_over == None:
+                        occ_over = 0
+                    occ_under = occupation_undereq50k.get(word)
+                    if occ_under == None:
+                        occ_under = 0
+                    if occ_over > occ_under:
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
 
-                elif elementaccesed == 7:#relationship
+                elif elementaccesed == 7:  #relationship
                     #check both dictonarys related to relationship status
-                    rel_over =0
-                    rel_under =0
+                    rel_over = 0
+                    rel_under = 0
                     rel_over = relationship_over50k.get(word)
-                    if rel_over ==None:
-                        rel_over=0
-                    rel_under =relationship_under50k.get(word)
-                    if rel_under ==None:
-                        rel_under =0
-                    if rel_over> rel_under:
-                        overvalue+=1
+                    if rel_over == None:
+                        rel_over = 0
+                    rel_under = relationship_under50k.get(word)
+                    if rel_under == None:
+                        rel_under = 0
+                    if rel_over > rel_under:
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
 
-                elif elementaccesed == 8:#race
+                elif elementaccesed == 8:  #race
                     #check both dictonarys related to race
                     race_over = 0
                     race_under = 0
                     race_over = race_over50k.get(word)
                     if race_over == None:
-                        race_over =0
-                    race_under =race_undereq50k.get(word)
-                    if race_under ==None:
-                        race_under =0
-                    if race_over> race_under:
-                        overvalue+=1
+                        race_over = 0
+                    race_under = race_undereq50k.get(word)
+                    if race_under == None:
+                        race_under = 0
+                    if race_over > race_under:
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
 
-                elif elementaccesed == 9:#sex
+                elif elementaccesed == 9:  #sex
                     #check both dictonarys related to race
-                    sex_over =0
-                    sex_under =0
+                    sex_over = 0
+                    sex_under = 0
                     sex_over = sex_over50k.get(word)
-                    if sex_over ==None:
-                        sex_over =0
+                    if sex_over == None:
+                        sex_over = 0
                     sex_under = sex_undereq50k.get(word)
-                    if sex_under ==None:
-                        sex_under =0
-                    if sex_over> sex_under:
-                        overvalue+=1
+                    if sex_under == None:
+                        sex_under = 0
+                    if sex_over > sex_under:
+                        overvalue += 1
                     else:
-                        undervalue+=1
+                        undervalue += 1
 
-                elif elementaccesed ==14:
+                elif elementaccesed == 14:
                     answer = word
-                elementaccesed+=1
+                elementaccesed += 1
         #preditiction
-        if(overvalue > undervalue):
-            print("over is my preditction")
+        if (overvalue > undervalue):
+            #print("over is my preditction")
             #check
             if answer == ">50K\n":
-                Entries_correct +=1
-                Entries_counted+=1
-            elif answer =="<=50K\n":
-                Entries_wrong +=1
-                Entries_counted+=1
+                Entries_correct += 1
+                Entries_counted += 1
+            elif answer == "<=50K\n":
+                Entries_wrong += 1
+                Entries_counted += 1
             else:
-                Entries_error +=1
-                Entries_counted+=1
-        elif(overvalue< undervalue):
-            print("my preditiction is under or equal")
+                Entries_error += 1
+                Entries_counted += 1
+        elif (overvalue < undervalue):
+            #print("my preditiction is under or equal")
             if answer == "<=50K\n":
-                Entries_correct +=1
-                Entries_counted+=1
-            elif answer ==">50K\n":
-                Entries_wrong +=1
-                Entries_counted+=1
+                Entries_correct += 1
+                Entries_counted += 1
+            elif answer == ">50K\n":
+                Entries_wrong += 1
+                Entries_counted += 1
             else:
-                Entries_error+=1
-                Entries_counted+=1
+                Entries_error += 1
+                Entries_counted += 1
 
-        elif overvalue==undervalue:
-            Entries_not_predicted+=1
+        elif overvalue == undervalue:
+            Entries_not_predicted += 1
 
-        Entries+=1
+        Entries += 1
 
     print("-------------------------------------------")
     print("The Results are in\n")
-    print("Total Entries, Entries Counted , Entries Correct, Entries Wrong , Entries Not Predicted, Errors")
-    print(Entries , Entries_counted ,Entries_correct,Entries_wrong ,Entries_not_predicted ,Entries_error)
-    Correctprectage =0
-    Correctprectage = (Entries_correct/Entries_counted)*100
+    print("Total Entries, Entries Counted, Entries Correct, Entries Wrong, Entries Not Predicted, Errors")
+    print("{}\t\t\t{}\t\t\t{}\t\t\t\t{}\t\t\t\t{}\t\t\t\t\t{}".format(Entries, Entries_counted, Entries_correct, Entries_wrong, Entries_not_predicted,
+                                     Entries_error))
+    Correctprectage = 0
+    Correctprectage = (Entries_correct / Entries_counted) * 100
 
-    print(Correctprectage)
-
-
-
+    print("The accuracy of this program is {} %".format(Correctprectage))
 
 
 #fnlwgt education and native country not needed for study
@@ -555,11 +550,11 @@ sex_undereq50k = {}
 
 #------------
 discrete_Cal(listlayout, workclass_over50k, workclass_undereq50k, "workclass")
-discrete_Cal(listlayout,matital_status_over50k,matital_status_undereq50k,"marital-status")
-discrete_Cal(listlayout,occupation_over50k,occupation_undereq50k,"occupation")
-discrete_Cal(listlayout,relationship_over50k,relationship_under50k,"relationship")
-discrete_Cal(listlayout,race_over50k,race_undereq50k,"race")
-discrete_Cal(listlayout,sex_over50k,sex_undereq50k,"sex")
+discrete_Cal(listlayout, matital_status_over50k, matital_status_undereq50k, "marital-status")
+discrete_Cal(listlayout, occupation_over50k, occupation_undereq50k, "occupation")
+discrete_Cal(listlayout, relationship_over50k, relationship_under50k, "relationship")
+discrete_Cal(listlayout, race_over50k, race_undereq50k, "race")
+discrete_Cal(listlayout, sex_over50k, sex_undereq50k, "sex")
 
 #call test
 """
