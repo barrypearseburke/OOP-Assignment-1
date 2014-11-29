@@ -19,7 +19,7 @@ import string
 #download fxn.
 def downloadfile():
     #vars that hold url
-    print("trying to download")
+    print("Trying to download")
     filedown = "http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
     h = httplib2.Http(".cache")
     file_headers, file = h.request(filedown)  # that is working correctly . Header isent being added to file.
@@ -50,7 +50,7 @@ def splitfile(file):
         ##have to make precentage##
 
 
-        if (precentage < 0.1) or (precentage > 75):
+        if (precentage < 30) or (precentage > 75):
             print("Error, please enter a number between 30 and 75")
         else:
             break
@@ -69,7 +69,7 @@ def splitfile(file):
         quit()
 
     NumberOfLines = lines(file)
-    print(NumberOfLines)  #32563 lines
+    #print(NumberOfLines)  #32563 lines
 
     counter = 0
     #find out how many lines go to each file
@@ -78,8 +78,8 @@ def splitfile(file):
     TrainingEntries = (NumberOfLines * precentage)
     TestingEntries = NumberOfLines - TrainingEntries
 
-    print("the number of lines that will be used for training is  %d \nand the numbers used as a test will be %d" % (
-        TrainingEntries, TestingEntries))
+    print("The number of lines that will be used for training is  %d \nand the numbers used as a test will be %d" % (
+        TrainingEntries, TestingEntries))#feedback to user
 
 
     #writes file into 2 seperate files, 1 for training and one for testing
@@ -136,7 +136,7 @@ def adveragefxn(listlayout, search):
     #This fxn will recieve the list of how the data is arraged, The call will also send what it wants
     #to find the advearge of.
     #it uses the .isdigt to see if the item is a digt
-    print(search)
+    #print(search) #prints what your looking for
     #opens the 2 files
     try:
         over50k = open("trainover50k.txt", "r")
@@ -187,7 +187,7 @@ def adveragefxn(listlayout, search):
                 searchcounter = searchcounter + 1
 
     adverageover50k = adveragevalueover50k / adveragecounter
-    print(adverageover50k)
+    #print(adverageover50k)
     #____________________________________________________________
     #split file after every comma on file trainundereq50k..
     adverageundereq50k = 0
@@ -215,11 +215,11 @@ def adveragefxn(listlayout, search):
                 searchcounter = searchcounter + 1
 
     adverageundereq50k = adveragevalueundereq50k / adveragecounter
-    print(adverageundereq50k)
+    #print(adverageundereq50k)
 
     #adverage of adverage
     AdverageTotal = (adverageover50k + adverageundereq50k ) / 2
-    print(AdverageTotal)
+   # print(AdverageTotal)
 
     return (AdverageTotal)
 
@@ -508,67 +508,68 @@ def testfxn(listlayout):
 
     print("-------------------------------------------")
     print("The Results are in\n")
-    print("Total Entries, Entries Counted, Entries Correct, Entries Wrong, Entries Not Predicted, Errors")
-    print("{}\t\t\t{}\t\t\t{}\t\t\t\t{}\t\t\t\t{}\t\t\t\t\t{}".format(Entries, Entries_counted, Entries_correct, Entries_wrong, Entries_not_predicted,
+    print("Total Entries,\tEntries Counted,\tEntries Correct,\tEntries Wrong,\tEntries Not Predicted,\tErrors")
+    print("{}\t\t\t{}\t\t\t\t{}\t\t\t\t{}\t\t\t{}\t\t\t\t\t\t{}".format(Entries, Entries_counted, Entries_correct, Entries_wrong, Entries_not_predicted,
                                      Entries_error))
     Correctprectage = 0
     Correctprectage = (Entries_correct / Entries_counted) * 100
 
-    print("The accuracy of this program is {} %".format(Correctprectage))
+    print("\nThe accuracy of this program is {} %".format(Correctprectage))
 
+if __name__ == "__main__":
 
-#fnlwgt education and native country not needed for study
-listlayout = ["age", "workclass", "fnlwgt", "education", "education-no", "marital-status", "occupation", "relationship",
-              "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "income"]
+    #fnlwgt education and native country not needed for study
+    listlayout = ["age", "workclass", "fnlwgt", "education", "education-no", "marital-status", "occupation", "relationship",
+                  "race", "sex", "capital-gain", "capital-loss", "hours-per-week", "native-country", "income"]
 
-file = downloadfile()
-splitfile(file)
-formatfiletrain()
-#get adverage age on both over and lesseq files
-adverage_age = adveragefxn(listlayout, "age")  #sends list and string called age
-#get adverage education-number on over and lesseq files
-adverage_ed_no = adveragefxn(listlayout, "education-no")
-adverage_capital_gain = adveragefxn(listlayout, "capital-gain")
-adverage_capital_loss = adveragefxn(listlayout, "capital-loss")
-adverage_Hours_per_week = adveragefxn(listlayout, "hours-per-week")
+    file = downloadfile()
+    splitfile(file)
+    formatfiletrain()
+    #get adverage age on both over and lesseq files
+    adverage_age = adveragefxn(listlayout, "age")  #sends list and string called age
+    #get adverage education-number on over and lesseq files
+    adverage_ed_no = adveragefxn(listlayout, "education-no")
+    adverage_capital_gain = adveragefxn(listlayout, "capital-gain")
+    adverage_capital_loss = adveragefxn(listlayout, "capital-loss")
+    adverage_Hours_per_week = adveragefxn(listlayout, "hours-per-week")
 
-#-----------------
-#dictionarys define
+    #-----------------
+    #dictionarys define
 
-workclass_over50k = {}
-workclass_undereq50k = {}
-matital_status_over50k = {}
-matital_status_undereq50k = {}
-occupation_over50k = {}
-occupation_undereq50k = {}
-relationship_over50k = {}
-relationship_under50k = {}
-race_over50k = {}
-race_undereq50k = {}
-sex_over50k = {}
-sex_undereq50k = {}
+    workclass_over50k = {}
+    workclass_undereq50k = {}
+    matital_status_over50k = {}
+    matital_status_undereq50k = {}
+    occupation_over50k = {}
+    occupation_undereq50k = {}
+    relationship_over50k = {}
+    relationship_under50k = {}
+    race_over50k = {}
+    race_undereq50k = {}
+    sex_over50k = {}
+    sex_undereq50k = {}
 
-#------------
-discrete_Cal(listlayout, workclass_over50k, workclass_undereq50k, "workclass")
-discrete_Cal(listlayout, matital_status_over50k, matital_status_undereq50k, "marital-status")
-discrete_Cal(listlayout, occupation_over50k, occupation_undereq50k, "occupation")
-discrete_Cal(listlayout, relationship_over50k, relationship_under50k, "relationship")
-discrete_Cal(listlayout, race_over50k, race_undereq50k, "race")
-discrete_Cal(listlayout, sex_over50k, sex_undereq50k, "sex")
+    #------------
+    discrete_Cal(listlayout, workclass_over50k, workclass_undereq50k, "workclass")
+    discrete_Cal(listlayout, matital_status_over50k, matital_status_undereq50k, "marital-status")
+    discrete_Cal(listlayout, occupation_over50k, occupation_undereq50k, "occupation")
+    discrete_Cal(listlayout, relationship_over50k, relationship_under50k, "relationship")
+    discrete_Cal(listlayout, race_over50k, race_undereq50k, "race")
+    discrete_Cal(listlayout, sex_over50k, sex_undereq50k, "sex")
 
-#call test
-"""
-print(workclass_over50k)
-print(workclass_undereq50k)
-print(matital_status_over50k)
-print(matital_status_undereq50k)
-print(occupation_over50k)
-print(occupation_undereq50k)
-print(relationship_over50k)
-print(relationship_under50k)
-print(race_over50k)
-print(race_undereq50k)
-print(sex_over50k)
-print(sex_undereq50k)
-"""
-testfxn(listlayout)
+    #call test
+    """
+    print(workclass_over50k)
+    print(workclass_undereq50k)
+    print(matital_status_over50k)
+    print(matital_status_undereq50k)
+    print(occupation_over50k)
+    print(occupation_undereq50k)
+    print(relationship_over50k)
+    print(relationship_under50k)
+    print(race_over50k)
+    print(race_undereq50k)
+    print(sex_over50k)
+    print(sex_undereq50k)
+    """
+    testfxn(listlayout)
